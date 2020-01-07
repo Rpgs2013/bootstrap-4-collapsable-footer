@@ -1,0 +1,51 @@
+/***********************/
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+body {
+  padding-top: 60px;
+  .subscribe {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    z-index: 5000;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    a {
+      display: inline-block;
+      border-radius: inherit;
+      padding: 10px 20px;
+      background-color: #ff0000;
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Courgette', cursive;
+      &:hover {
+        background-color: darken(#ff0000, 10%);
+      }
+      span {
+        margin-left: 2px;
+      }
+    }
+  }
+}
+/********************/
+
+@function rem($value) {
+  @return unquote(($value/1px)/16+'rem');
+}
+
+.icon {
+  height: rem(40px);
+  width: rem(40px);
+  border: 1px solid lighten(#212121, 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: rem(2px);
+  color: #ffffff;
+  text-decoration: none;
+  &:hover {
+    background-color: #fff;
+    text-decoration: none;
+    color: #212121;
+  }
+}
